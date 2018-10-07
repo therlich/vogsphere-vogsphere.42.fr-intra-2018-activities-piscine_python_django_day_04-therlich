@@ -1,0 +1,9 @@
+<form action="/ex02/" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="OK">
+</form>
+<h1>History:</h1>
+{% for line in results %}
+<p>{{line}}</p>
+{% endfor %}
