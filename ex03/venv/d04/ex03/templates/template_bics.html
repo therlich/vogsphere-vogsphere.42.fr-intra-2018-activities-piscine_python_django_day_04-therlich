@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>50 nuances de bic</title>
+  <style>
+    table td,th {
+      height: 40px;
+      width: 80px;
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <tr>
+      <th>Noir</th>
+      <th>Rouge</th>
+      <th>Bleu</th>
+      <th>Vert</th>
+    </tr>
+    {% for line in colors %}
+    <tr>
+      {% for cell in line %}
+      <td style="background-color: {{ cell }}"></td>
+      {% endfor %}
+    </tr>
+    {% endfor %}
+  </table>
+</body>
+</html>
